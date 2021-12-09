@@ -1,1 +1,232 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header header" "second-sec second-sec second-sec second-sec" "second-ov-tit second-ov-tit second-ov-tit second-ov-tit " "box-1 box-1 box-1 box-1" "box-2 box-2 box-2 box-2";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.title {
+  background-color: none;
+  margin: 3em;
+  width: 50%;
+}
+
+.button-area {
+  background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  margin: 3em;
+  margin-right: 4.5em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.btn-text {
+  margin-top: .5em;
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+.second-sec {
+  background-color: none;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: second-sec;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.up-boxes {
+  background-color: lightgrey;
+  margin: 1em;
+  margin-top: -4em;
+  height: 200px;
+  width: 40%;
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(1%, black), color-stop(50%, cyan), to(black));
+  background-image: linear-gradient(to left, black 1%, cyan 50%, black 100%);
+  background-size: 100% 4px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.upper-part-header-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5em;
+}
+
+.second-overview-title {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: second-ov-tit;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: none;
+}
+
+.box-1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: box-1;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sec-box {
+  background-color: #ccc;
+  height: 130px;
+  width: 20%;
+  margin: 1em;
+}
+
+.box-1-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-1-lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-1-upper-p {
+  margin: 1em;
+}
+
+.box-1-upper-i {
+  margin: 1em;
+}
+
+.box-1-lower-p {
+  margin: 1em;
+}
+
+.box-1-lower-p2 {
+  margin: 1em;
+}
+
+.box-2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: box-2;
+  margin-bottom: 2em;
+}
+/*# sourceMappingURL=styles.css.map */
