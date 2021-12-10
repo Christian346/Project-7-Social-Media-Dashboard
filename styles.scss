@@ -8,42 +8,47 @@ box-sizing: border-box;
 }
 
 body{
-     
+    background-color: $White-BG;
     font-family: 'Inter', sans-serif;
-
     display: grid;
     grid-template-areas: 
     "header header header header"
     "second-sec second-sec second-sec second-sec"
     "second-ov-tit second-ov-tit second-ov-tit second-ov-tit "
     "box-1 box-1 box-1 box-1"
-    "box-2 box-2 box-2 box-2"
     ;
-   
 }
 
 .header{
 grid-area: header;
-background-color: aliceblue;
+background-color: $Very-Pale-Blue-Top-BG-Pattern;
 display: flex;
 width: 90%;
 height: 200px;
 margin:0 auto;
 border-bottom-left-radius: 30px;
 border-bottom-right-radius: 30px;
+
+}
+.title-button{
+    display: flex;
+    margin:0 auto;
+    width:75%;
+    background-color:none;
 }
 
 .title{
     background-color:none;
-   margin:3em;
-   width:50%;
+    margin-top: 3em;
+    width:80%;
 }
+
+
 .button-area{
-    background-color: none;
+    background-color:none;
     display: flex;
-    width:40%;
-    margin:3em;
-    margin-right:4.5em;
+    width:100%;
+    margin-top:3em;
     justify-content: flex-end;
 }
 .btn-text{
@@ -52,60 +57,103 @@ border-bottom-right-radius: 30px;
    font-weight: bold;
 }
 .second-sec{
-background-color: none;
+background-color:none;
 grid-area:second-sec;
-width:80%;
+width:71%;
 margin:0 auto;
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 }
     
 .up-boxes{
-background-color:lightgrey;
+background-color:$Light-Grayish-Blue-Card-BG;
 margin:1em;
-margin-top:-4em;
+margin-top:-3em;
+margin-bottom: 4em;
 height:200px;  
-width: 40%;
+width: 223px;//223px //30%
 border-radius: 3px;
-background-image: linear-gradient(to left, rgba(0, 0, 0, 1) 1%, rgba(0, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+background-image: linear-gradient(to right,$Facebook 100%);
 background-size: 100% 4px;
 background-position:0% 0%;
 background-repeat: no-repeat;
 text-align: center;
 
 }
+
 .upper-part-header-boxes{
     display: flex;
     justify-content: center;
     margin-top: 1.5em;
 }
+.upper-part-header-boxes p{
+    font-weight: bold;
+    color:$Dark-Grayish-Blue-Text;
+}
+
+.upper-part-header-boxes i{
+margin-right:1em;
+margin-bottom:1em;
+}
+
+.up-boxes-p1{
+ font-size: 3rem;
+ font-weight: bolder;
+}
+.up-boxes-p2{
+color:$Dark-Grayish-Blue-Text;
+letter-spacing: 2px;
+margin-bottom: 1.5em;
+}
+.up-boxes-p3{
+color:$Lime-Green
+}
+
+//
+.twit-box{
+    background-image: linear-gradient(to right,$Twitter 100%)
+}
+.ig-box{
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%) 1%, hsl(329, 70%, 58%) 100%)
+}
+.yout-box{
+    background-image: linear-gradient(to right,$YouTube 100%)
+}
+
+//
 
 
 .second-overview-title{
 grid-area:second-ov-tit;
-width:80%;
+width:81%;
 margin: 0 auto;
 margin-top:2em;
+margin-right: 3.5em;
 margin-bottom:2em;
 background-color:none; 
- 
 }
-
+.sec-over-p{
+    margin-left:0.5em;
+    margin-bottom: 1em;
+    color: $Dark-Grayish-Blue-Text;
+}
 
 .box-1{
 grid-area:box-1;
-background-color: green;
+background-color:none;
 display:flex;
 flex-wrap: wrap;
 justify-content: center;
-width:80%;
+width:81%;
 margin:0 auto;
 }
 .sec-box{
-background-color: #ccc;
-height: 130px;
-width:20%;
-margin:1em;
+background-color: $Light-Grayish-Blue-Card-BG;
+height:130px;
+width:235px;
+margin:0em 0.5em 1em 0.5em;
+border-radius:3px;
 }
  
 .box-1-upper{
@@ -115,25 +163,109 @@ display: flex;
 display: flex;
 }
 .box-1-upper-p{
+color:$Dark-Grayish-Blue-Text;
+font-weight: bold;
 margin:1em;
 }
 .box-1-upper-i{
-margin:1em;
+margin:1em 1em 1em 4em;
 }
 .box-1-lower-p{
-margin:1em;
+font-weight: bolder;
+font-size: 2rem;
+margin:0.5em;
 }
 .box-1-lower-p2{
-margin:1em;
+color:$Lime-Green;
+font-size: 0.8rem;
+margin:2.3em 1em 1em 7em;
 }
 
-//
-.box-2{
-    grid-area:box-2;
-    margin-bottom:2em;
-    //thiis a test class might be deleted later
-   }
-//
+//664px for phone query n below
+@media screen and (max-width:664px) {
+
+    .header{
+        padding-bottom:13.5em;
+    }
+    .title{
+        font-size:0.8rem;
+        white-space: wrap;
+        border-bottom: 2px solid $toggleLight;
+        padding-bottom: 2em;
+        width: 100%;
+        background-color:none;
+    }
+    .title-button{
+        flex-direction: column;
+        width:90%;
+    }
+    .button-area{
+        margin-top: 1em;
+        background-color:none;
+        width:100%;
+        justify-content: flex-end;
+    }
+    .btn-text{
+
+        width: 80%;
+        justify-content: flex-start;
+    }
+    .second-sec{
+        margin-top:2em;
+        background-color:none;
+        width: 100%;
+    }
+    .up-boxes{
+        width: 75%;
+    }
+
+    .box-1{
+        width:100%;
+        }
+
+    .sec-box{  
+
+        width:75%;
+    }
+    .second-overview-title{
+
+        width:100%;
+        margin-top:1em;
+        }
+        .sec-over-p{
+            
+            width:fit-content;
+            text-align: center;
+            margin-left:14vw;
+            margin-bottom: 0em;
+        
+        }
+        
+        .box-1-upper-p{
+            color:$Dark-Grayish-Blue-Text;
+            font-weight: bold;
+            margin:1em;
+            }
+            .box-1-upper-i{
+            margin:1em 2em 0em 0em;
+            width:100%;
+            height: 22px;
+            justify-content: flex-end;
+            display: flex;
+            }
+            
+            .box-1-lower-p2{
+            font-size: 0.8rem;
+            margin:2.3em 1em 0em 0em;
+            display: flex;
+            justify-content: flex-end;
+            width:100%
+            }
+    
+    
+}
+
+
 
 
 
