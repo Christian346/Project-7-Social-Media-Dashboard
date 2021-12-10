@@ -1,0 +1,82 @@
+@mixin phonequery(){
+    
+    .header{
+        padding-bottom:13.5em;
+    }
+    .title{
+        font-size:0.8rem;
+        white-space: wrap;
+        border-bottom: 2px solid $toggleLight;
+        padding-bottom: 2em;
+        width: 100%;
+        background-color:none;
+    }
+    .title-button{
+        flex-direction: column;
+        width:90%;
+    }
+    .button-area{
+        margin-top: 1em;
+        background-color:none;
+        width:100%;
+        justify-content: flex-end;
+    }
+    .btn-text{
+
+        width: 80%;
+        justify-content: flex-start;
+    }
+    .second-sec{
+        margin-top:2em;
+        background-color:none;
+        width: 100%;
+    }
+    .up-boxes{
+        width: 75%;
+    }
+
+    .box-1{
+        width:100%;
+        }
+
+    .sec-box{  
+
+        width:75%;
+    }
+    .second-overview-title{
+
+        width:100%;
+        margin-top:1em;
+        }
+        .sec-over-p{
+            
+            width:fit-content;
+            text-align: center;
+            margin-left:14vw;
+            margin-bottom: 0em;
+        
+        }
+        
+        .box-1-upper-p{
+            color:$Dark-Grayish-Blue-Text;
+            font-weight: bold;
+            margin:1em;
+            }
+            .box-1-upper-i{
+            margin:1em 2em 0em 0em;
+            width:100%;
+            height: 22px;
+            justify-content: flex-end;
+            display: flex;
+            }
+            
+            .box-1-lower-p2{
+            font-size: 0.8rem;
+            margin:2.3em 1em 0em 0em;
+            display: flex;
+            justify-content: flex-end;
+            width:100%
+            }
+    
+
+}

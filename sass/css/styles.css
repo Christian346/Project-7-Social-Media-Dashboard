@@ -100,7 +100,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 75%;
+  width: 81.5%;
   background-color: none;
 }
 
@@ -134,7 +134,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: second-sec;
-  width: 71%;
+  width: 82%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,11 +148,11 @@ body {
 
 .up-boxes {
   background-color: #f0f2fa;
-  margin: 1em;
+  margin: 0.6em;
   margin-top: -3em;
   margin-bottom: 4em;
   height: 200px;
-  width: 223px;
+  width: 250px;
   border-radius: 3px;
   background-image: -webkit-gradient(linear, left top, right top, to(#198ff5));
   background-image: linear-gradient(to right, #198ff5 100%);
@@ -217,16 +217,19 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: second-ov-tit;
-  width: 81%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 2em;
-  margin-right: 3.5em;
+  margin-right: 0em;
   margin-bottom: 2em;
   background-color: none;
 }
 
 .sec-over-p {
-  margin-left: 0.5em;
+  background-color: none;
+  width: 81%;
+  margin: 0 auto;
+  margin-right: 3.3em;
   margin-bottom: 1em;
   color: #63687e;
 }
@@ -245,15 +248,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 81%;
+  width: 82%;
   margin: 0 auto;
 }
 
 .sec-box {
   background-color: #f0f2fa;
   height: 130px;
-  width: 235px;
-  margin: 0em 0.5em 1em 0.5em;
+  width: 250px;
+  margin: 0.6em;
   border-radius: 3px;
 }
 
