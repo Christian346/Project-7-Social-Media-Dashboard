@@ -1,0 +1,24 @@
+@mixin darkmode(){
+    .body-dark{
+        background-color:$Very-Dark-Blue-BG;
+    }
+    .header-dark{
+        background-color:$Very-Dark-Blue-Top-BG-Pattern;
+        color:$White-Text
+    }
+    .second-sec-dark{
+        color:$White-Text;
+    }
+    .up-boxes-dark{
+        background-color:$Dark-Desaturated-Blue-Card-BG;
+    }
+    .sec-over-p-dark{
+        color: $White-Text;
+    }
+    .box-1-dark{
+        color: $White-Text;
+    }
+    .sec-box-dark{
+        background-color: $Dark-Desaturated-Blue-Card-BG;
+    }
+}

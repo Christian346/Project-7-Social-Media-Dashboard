@@ -72,11 +72,14 @@ input:checked + .slider:before {
 }
 
 body {
-  background-color: white;
   font-family: 'Inter', sans-serif;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header header header header" "second-sec second-sec second-sec second-sec" "second-ov-tit second-ov-tit second-ov-tit second-ov-tit " "box-1 box-1 box-1 box-1";
+}
+
+.body-white {
+  background-color: white;
 }
 
 .header {
@@ -336,6 +339,35 @@ body {
           align-items: center;
   margin-left: 0.5em;
   color: #1db489;
+}
+
+.body-dark {
+  background-color: #1e202a;
+}
+
+.header-dark {
+  background-color: #1f212e;
+  color: white;
+}
+
+.second-sec-dark {
+  color: white;
+}
+
+.up-boxes-dark {
+  background-color: #252a41;
+}
+
+.sec-over-p-dark {
+  color: white;
+}
+
+.box-1-dark {
+  color: white;
+}
+
+.sec-box-dark {
+  background-color: #252a41;
 }
 
 @media screen and (max-width: 664px) {

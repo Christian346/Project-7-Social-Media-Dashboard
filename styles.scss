@@ -1,6 +1,7 @@
 @import "sliderbutton";
 @import "variables";
 @import "mediaquery";
+@import "darkmode";
 
 *{
 padding:0;
@@ -9,7 +10,6 @@ box-sizing: border-box;
 }
 
 body{
-    background-color: $White-BG;
     font-family: 'Inter', sans-serif;
     display: grid;
     grid-template-areas: 
@@ -18,6 +18,9 @@ body{
     "second-ov-tit second-ov-tit second-ov-tit second-ov-tit "
     "box-1 box-1 box-1 box-1"
     ;
+}
+.body-white{
+   background-color: $White-BG;;
 }
 
 .header{
@@ -123,7 +126,7 @@ color:$Lime-Green
     background-image: linear-gradient(to right,$YouTube 100%)
 }
 
-//
+//places for triangle 1
 .results-flex{
     display: flex;
     justify-content: center;
@@ -131,7 +134,7 @@ color:$Lime-Green
 .arrows{
     margin-right: 0.5em;
 }
-//
+// places for tirange 2
 .results-flex-2{
 display: flex;
 margin:2.3em 1em 1em 3.5em;
@@ -215,10 +218,7 @@ margin:0.5em;
     color:$Lime-Green;
 }
 //dark-mode settings
-//bk-color white to black
-//headerbar white to black
-//letters black to white
-
+@include darkmode();
 //664px for phone query n below
 @media screen and (max-width:664px) {
 @include phonequery();  
