@@ -65,7 +65,7 @@ input:checked + .slider:before {
 }
 
 .triangle-up {
-  visibility: visible;
+  visibility: hidden;
   margin-top: 0.4em;
   width: 0;
   height: 0;
@@ -75,7 +75,7 @@ input:checked + .slider:before {
 }
 
 .triangle-down {
-  visibility: visible;
+  visibility: hidden;
   margin-top: 0.4em;
   width: 0;
   height: 0;
@@ -86,7 +86,7 @@ input:checked + .slider:before {
 }
 
 .triangle-up2 {
-  visibility: visible;
+  visibility: hidden;
   margin-top: 0.4em;
   width: 0;
   height: 0;
@@ -97,7 +97,7 @@ input:checked + .slider:before {
 }
 
 .triangle-down2 {
-  visibility: visible;
+  visibility: hidden;
   margin-top: 0.4em;
   width: 0;
   height: 0;
