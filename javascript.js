@@ -1,3 +1,10 @@
+let facebookData = ['@nathan','1987','FOLLOWERS','12']
+
+
+
+
+
+
 let body = document.querySelector('body');
 let header = document.querySelector(".header")
 let secondSec = document.querySelector(".second-sec");

@@ -1,0 +1,37 @@
+//triangles
+
+@mixin triangleshape(){
+    visibility:visible;
+    margin-top: 0.4em;
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+}
+.triangle-up {
+  @include triangleshape();
+    border-bottom: 5px solid $Lime-Green;
+  }
+
+
+  .triangle-down {
+      @include triangleshape();
+      margin-top: 0em;
+      border-top: 5px solid $YouTube;
+  }
+
+//lower triangles
+.triangle-up2 {
+    @include triangleshape();
+    margin-top: 0em;
+    border-bottom: 5px solid $Lime-Green;
+  }
+
+
+  .triangle-down2 {
+      @include triangleshape();
+      margin-top: 0.5em;
+      margin-left: -0.6em;
+      border-top: 5px solid $YouTube;
+  }
