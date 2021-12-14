@@ -60,9 +60,11 @@ let youtubeLowData2 = ['1407',-12]
     //
     if(facebookData[3] > 0){
      document.querySelector('.triangle-up').style.visibility = "visible"
+     document.querySelector('.up-boxes-p3').style.color ="hsl(163, 72%, 41%)"
     }
     else{
         document.querySelector('.triangle-down').style.visibility = "visible"
+        document.querySelector('.up-boxes-p3').style.color ="hsl(356, 69%, 56%)"
     }
 //facebook box ends 
     
