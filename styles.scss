@@ -71,6 +71,10 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 }
+.super-flex{
+   display: flex;
+   
+}
 
 //triangles
 
@@ -101,6 +105,7 @@ text-align: center;
 
 
 .upper-part-header-boxes{
+    background-color: none;
     display: flex;
     justify-content: center;
     margin-top: 1.5em;

@@ -193,6 +193,12 @@ body {
           justify-content: center;
 }
 
+.super-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #triangle-up {
   width: 0;
   height: 0;
@@ -218,6 +224,7 @@ body {
 }
 
 .upper-part-header-boxes {
+  background-color: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,6 +448,7 @@ body {
 
 @media screen and (max-width: 664px) {
   .header {
+    background-color: none;
     padding-bottom: 13.5em;
     width: 99%;
   }
@@ -480,6 +488,15 @@ body {
   }
   .up-boxes {
     width: 75%;
+  }
+  .super-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .up-boxes-p3 {
     font-size: 0.7rem;

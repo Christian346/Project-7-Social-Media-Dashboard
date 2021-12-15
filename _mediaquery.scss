@@ -1,6 +1,7 @@
 @mixin phonequery(){
     
     .header{
+        background-color:none;
         padding-bottom:13.5em;
         width: 99%;
     }
@@ -35,6 +36,12 @@
     .up-boxes{
         width: 75%;
     }
+    .super-flex{
+        display: flex;
+        width:100%;
+        justify-content: center;
+     }
+    
     .up-boxes-p3{
         font-size:0.7rem;
         }
