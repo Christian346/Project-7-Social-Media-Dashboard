@@ -1,4 +1,54 @@
+const api_Url = "https://run.mocky.io/v3/e777bed2-af73-4742-a035-284a8584a087"
+
+const HTMLResponse = document.querySelector(".second-sec");
+
+//returns a promise
+fetch(`${api_Url}/Companies`)
+.then((response) => response.json())
+.then((companies1) => {
+
+    let contentDiv = document.createElement('div');
+    
+    const tpl = companies1.map( company1 => `
+     
+    <div class="up-boxes-dark up-boxes ${upperboxesclasses[i]}">
+        <div class="upper-part-header-boxes">
+            <i><img src="${company1.topIcon}" alt=""></i> <p>${company1.account}</p>
+          </div>
+
+          <p class="up-boxes-p1">${company1.totalFollowers}</p>
+          <p class="up-boxes-p2">${company1.typeOfFollowers}</p>
+          
+          <div class="results-flex">
+          <div class="arrows"> <div class ="triangle-up"></div> <div class="triangle-down"></div></div>
+          <p class="up-boxes-p3">${Math.abs(company1.netChange)} today</p>
+
+        </div>
+        </div>
+    
+    
+    `);
+
+    contentDiv.classList.add('super-flex');
+    contentDiv.innerHTML = tpl;
+    //place it in
+    HTMLResponse.append(contentDiv)
+
+    if(company1.netChange > 0){
+        document.querySelectorAll('.triangle-up').style.visibility = "visible"
+        document.querySelectorAll('.up-boxes-p3').style.color ="hsl(163, 72%, 41%)"
+       }
+       else{
+           document.querySelectorAll('.triangle-down').style.visibility = "visible"
+           document.querySelectorAll('.up-boxes-p3').style.color ="hsl(356, 69%, 56%)"
+       }
+
+});
+
+
+
 //JSON
+
 let companies =
 [
     {
@@ -122,7 +172,7 @@ let secondJson =
 let upperboxesclasses =['facebook-main','twit-box' ,'ig-box','yout-box']
 
 //first 4 boxes 
-
+/*
 for(var i =0; i < companies.length;i++){
     //where info will be appended
     let upBoxes = document.querySelector(".second-sec")
@@ -165,7 +215,7 @@ for(var i =0; i < companies.length;i++){
    }
 
 //first 4 boxes ends 
-
+*/
 
 
 //lower boxes
