@@ -2,18 +2,21 @@ const api_Url = "https://run.mocky.io/v3/e777bed2-af73-4742-a035-284a8584a087"
 
 const HTMLResponse = document.querySelector(".second-sec");
 
+//the comma issue inside the template literal
 //returns a promise
 fetch(`${api_Url}/Companies`)
 .then((response) => response.json())
 .then((companies1) => {
+   
 
     let contentDiv = document.createElement('div');
-    
-    const tpl = companies1.map( company1 => `
-     
-    <div class="up-boxes-dark up-boxes ${upperboxesclasses[i]}">
+    const tpl = companies1.map( company1 => 
+        
+        //map method returns new array
+        `
+      <div class="up-boxes-dark up-boxes ${company1.classes}">
         <div class="upper-part-header-boxes">
-            <i><img src="${company1.topIcon}" alt=""></i> <p>${company1.account}</p>
+            <i><img src="images/${company1.topIcon}" alt=""></i> <p>${company1.account}</p>
           </div>
 
           <p class="up-boxes-p1">${company1.totalFollowers}</p>
@@ -22,28 +25,89 @@ fetch(`${api_Url}/Companies`)
           <div class="results-flex">
           <div class="arrows"> <div class ="triangle-up"></div> <div class="triangle-down"></div></div>
           <p class="up-boxes-p3">${Math.abs(company1.netChange)} today</p>
-
         </div>
         </div>
+   
     
+    `).join('');//clear the commas or separators
+   
     
-    `);
-
     contentDiv.classList.add('super-flex');
     contentDiv.innerHTML = tpl;
     //place it in
     HTMLResponse.append(contentDiv)
-
-    if(company1.netChange > 0){
-        document.querySelectorAll('.triangle-up').style.visibility = "visible"
-        document.querySelectorAll('.up-boxes-p3').style.color ="hsl(163, 72%, 41%)"
+    
+   for(var i =0; i < companies1.length ;i++){
+    if(companies[i].netChange > 0){
+        document.querySelectorAll('.triangle-up')[i].style.visibility = "visible"
+        document.querySelectorAll('.up-boxes-p3')[i].style.color ="hsl(163, 72%, 41%)"
        }
        else{
-           document.querySelectorAll('.triangle-down').style.visibility = "visible"
-           document.querySelectorAll('.up-boxes-p3').style.color ="hsl(356, 69%, 56%)"
+           document.querySelectorAll('.triangle-down')[i].style.visibility = "visible"
+           document.querySelectorAll('.up-boxes-p3')[i].style.color ="hsl(356, 69%, 56%)"
        }
+   }
 
-});
+
+let lowBoxes = document.querySelector('.box-1')
+let ContentDiv = document.createElement('div')
+
+//console.log(companies1.overview)
+   
+let tpl2 = companies1.map( lowbox => 
+    `
+   <div class="sec-box-dark sec-box ">
+        <div class="box-1-upper">
+            <p class="box-1-upper-p">${lowbox.overview[0].upperText}</p>
+            <i class="box-1-upper-i"><img src="images/${lowbox.overview[0].lowIcon}" alt=""></i>
+        </div>
+
+        <div class="box-1-lower">
+            <p class="box-1-lower-p">${lowbox.overview[0].lowerTextValue}</p>
+
+            <div class="results-flex-2">
+                <div class="arrows-2"><div class ="triangle-up2"></div> <div class="triangle-down2"></div></div>
+                <p class="box-1-lower-p2">${Math.abs(lowbox.overview[0].percentage)} %</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="sec-box-dark sec-box ">
+    <div class="box-1-upper">
+        <p class="box-1-upper-p">${lowbox.overview[1].upperText}</p>
+        <i class="box-1-upper-i"><img src="images/${lowbox.overview[1].lowIcon}" alt=""></i>
+    </div>
+
+    <div class="box-1-lower">
+        <p class="box-1-lower-p">${lowbox.overview[1].lowerTextValue}</p>
+
+        <div class="results-flex-2">
+            <div class="arrows-2"><div class ="triangle-up2"></div> <div class="triangle-down2"></div></div>
+            <p class="box-1-lower-p2">${Math.abs(lowbox.overview[1].percentage)} %</p>
+        </div>
+
+    </div>
+</div>
+    `
+).join('')
+ContentDiv.classList.add('super-flex')
+ContentDiv.innerHTML = tpl2;
+lowBoxes.append(ContentDiv);
+
+for(var i =0; i < 2 ;i++){
+    console.log(companies1[0].overview[0].percentage)
+
+    if(companies1[i].overview[i].percentage > 0){
+        document.querySelectorAll('.triangle-up')[0].style.visibility = "visible"
+        document.querySelectorAll('.up-boxes-p3')[0].style.color ="hsl(163, 72%, 41%)"
+       }
+       else{
+           document.querySelectorAll('.triangle-down')[1].style.visibility = "visible"
+           document.querySelectorAll('.up-boxes-p3')[1].style.color ="hsl(356, 69%, 56%)"
+       }
+   }
+
+})
 
 
 
@@ -164,12 +228,14 @@ let secondJson =
 
 ]
 
+
+
 // always use double quotes for JSON!!!
 //console.log(JSON.parse(companies)[0].pageViews)
 
 //--data variables below
 //upperboxes classes
-let upperboxesclasses =['facebook-main','twit-box' ,'ig-box','yout-box']
+//let upperboxesclasses =['facebook-main','twit-box' ,'ig-box','yout-box']
 
 //first 4 boxes 
 /*
@@ -219,7 +285,7 @@ for(var i =0; i < companies.length;i++){
 
 
 //lower boxes
-
+/*
 for(var i =0; i < secondJson.length; i++){
 
 let lowBoxes = document.querySelector('.box-1')
@@ -263,7 +329,7 @@ if(secondJson[i].percentage > 0 )
    
 }
 //lower boxes end
-
+*/
 //!selection of variables after renderization
 
 //variables for color change and appends of data
