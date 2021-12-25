@@ -38,7 +38,7 @@ fetch(`${api_Url}/Companies`)
     HTMLResponse.append(contentDiv)
     
    for(var i =0; i < companies1.length ;i++){
-    if(companies[i].netChange > 0){
+    if(companies1[i].netChange > 0){
         document.querySelectorAll('.triangle-up')[i].style.visibility = "visible"
         document.querySelectorAll('.up-boxes-p3')[i].style.color ="hsl(163, 72%, 41%)"
        }
@@ -49,184 +49,60 @@ fetch(`${api_Url}/Companies`)
    }
 
 
+//2 boxes each
+for(var i =0;i < companies1[0].overview.length ;i++){
 let lowBoxes = document.querySelector('.box-1')
-let ContentDiv = document.createElement('div')
+let ContentDiv2 = document.createElement('div')
 
-//console.log(companies1.overview)
-   
+//second map
 let tpl2 = companies1.map( lowbox => 
     `
    <div class="sec-box-dark sec-box ">
         <div class="box-1-upper">
-            <p class="box-1-upper-p">${lowbox.overview[0].upperText}</p>
-            <i class="box-1-upper-i"><img src="images/${lowbox.overview[0].lowIcon}" alt=""></i>
+            <p class="box-1-upper-p">${lowbox.overview[i].upperText}</p>
+            <i class="box-1-upper-i"><img src="images/${lowbox.overview[i].lowIcon}" alt=""></i>
         </div>
 
         <div class="box-1-lower">
-            <p class="box-1-lower-p">${lowbox.overview[0].lowerTextValue}</p>
+            <p class="box-1-lower-p">${lowbox.overview[i].lowerTextValue}</p>
 
             <div class="results-flex-2">
                 <div class="arrows-2"><div class ="triangle-up2"></div> <div class="triangle-down2"></div></div>
-                <p class="box-1-lower-p2">${Math.abs(lowbox.overview[0].percentage)} %</p>
+                <p class="box-1-lower-p2">${Math.abs(lowbox.overview[i].percentage)} %</p>
             </div>
 
         </div>
     </div>
-    <div class="sec-box-dark sec-box ">
-    <div class="box-1-upper">
-        <p class="box-1-upper-p">${lowbox.overview[1].upperText}</p>
-        <i class="box-1-upper-i"><img src="images/${lowbox.overview[1].lowIcon}" alt=""></i>
-    </div>
 
-    <div class="box-1-lower">
-        <p class="box-1-lower-p">${lowbox.overview[1].lowerTextValue}</p>
-
-        <div class="results-flex-2">
-            <div class="arrows-2"><div class ="triangle-up2"></div> <div class="triangle-down2"></div></div>
-            <p class="box-1-lower-p2">${Math.abs(lowbox.overview[1].percentage)} %</p>
-        </div>
-
-    </div>
-</div>
     `
 ).join('')
-ContentDiv.classList.add('super-flex')
-ContentDiv.innerHTML = tpl2;
-lowBoxes.append(ContentDiv);
+ContentDiv2.classList.add('super-flex')
+ContentDiv2.innerHTML = tpl2;
+lowBoxes.append(ContentDiv2);
+}
+//?
+//validation for each 2 boxes
+for(var i =0; i < companies1.length; i++){
 
-for(var i =0; i < 2 ;i++){
-    console.log(companies1[0].overview[0].percentage)
+    if(companies1[i].overview[i].percentage > 0 ){
 
-    if(companies1[i].overview[i].percentage > 0){
-        document.querySelectorAll('.triangle-up')[0].style.visibility = "visible"
-        document.querySelectorAll('.up-boxes-p3')[0].style.color ="hsl(163, 72%, 41%)"
+        document.querySelectorAll('.triangle-up2')[i].style.visibility = "visible"
+        document.querySelectorAll('.box-1-lower-p2')[i].style.color ="hsl(163, 72%, 41%)"
        }
        else{
-           document.querySelectorAll('.triangle-down')[1].style.visibility = "visible"
-           document.querySelectorAll('.up-boxes-p3')[1].style.color ="hsl(356, 69%, 56%)"
+        document.querySelectorAll('.triangle-down2')[i].style.visibility = "visible"
+        document.querySelectorAll('.box-1-lower-p2')[i].style.color ="hsl(356, 69%, 56%)"
        }
+
+       
    }
+   
 
 })
 
 
 
-//JSON
 
-let companies =
-[
-    {
-         "name":"facebookData",
-         "topIcon":"images/icon-facebook.svg",
-         "account":"@nathan",
-         "totalFollowers": "1987",
-         "typeOfFollowers":"FOLLOWERS",
-         "netChange": 12
-    },
-
-    {
-        "name":"twitterData",
-        "topIcon":"images/icon-twitter.svg",
-        "account":"@nathan",
-        "totalFollowers": "1044",
-        "typeOfFollowers":"FOLLOWERS",
-        "netChange":99
-       
-    },
-    {
-    
-        "name":"igData",
-        "topIcon":"images/icon-instagram.svg",
-        "account":"@nathan",
-        "totalFollowers": "11k",
-        "typeOfFollowers":"FOLLOWERS",
-        "netChange":1099
-
-
-
-    },
-    {
-        "name":"youtubeData",
-        "topIcon":"images/icon-youtube.svg",
-        "account":"@nathan",
-        "totalFollowers": "8239",
-        "typeOfFollowers":"SUBSCRIBERS",
-        "netChange":-144
-    
-    }
-]
-
-let secondJson =
-[
-    {
-    "name":"facebookData",   
-    "upperText":"Page views",
-    "lowerTextValue":"87",
-    "lowIcon":"images/icon-facebook.svg",
-    "percentage": 3
-    },
-
-    {
-    "name":"facebookData",   
-    "upperText": "Likes",
-    "lowerTextValue":"52",
-    "lowIcon":"images/icon-facebook.svg",
-    "percentage":-2
-    },
-
-    {
-        "name":"igData",
-        "upperText":"Likes",
-        "lowerTextValue":"5462",
-        "lowIcon":"images/icon-instagram.svg",
-        "percentage":2257
-    },
-    
-    {
-        "name":"igData",
-        "upperText":"Profile Views",
-        "lowerTextValue":"52k",
-        "lowIcon":"images/icon-instagram.svg",
-        "percentage":1375
-
-    },
-
-    {
-        "name":"twitterData",
-        "upperText":"Retweets",
-        "lowerTextValue":"117",
-        "lowIcon":"images/icon-twitter.svg",
-        "percentage":303
-
-    },
-
-    {
-        "name":"twitterData",
-        "upperText": "Likes",
-        "lowerTextValue":"507",
-        "lowIcon":"images/icon-twitter.svg",
-        "percentage":553
-
-    },
-
-    {
-        "name":"youtubeData",
-        "upperText":"Likes",
-        "lowerTextValue":"107",
-        "lowIcon":"images/icon-youtube.svg",
-        "percentage":-19
-
-    },
-
-    {
-        "name":"youtubeData",
-        "upperText":"TotalViews",
-        "lowIcon":"images/icon-youtube.svg",
-        "lowerTextValue":"1047",
-        "percentage":-12
-    }
-
-]
 
 
 
