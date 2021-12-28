@@ -115,3 +115,107 @@ let secondJson =
 
 ]
 
+
+// always use double quotes for JSON!!!
+//console.log(JSON.parse(companies)[0].pageViews)
+
+//--data variables below
+//upperboxes classes
+//let upperboxesclasses =['facebook-main','twit-box' ,'ig-box','yout-box']
+
+//first 4 boxes 
+/*
+for(var i =0; i < companies.length;i++){
+    //where info will be appended
+    let upBoxes = document.querySelector(".second-sec")
+    let contentDiv = document.createElement('div');
+  
+    //create content variable
+    let content = `
+    
+    <div class="up-boxes-dark up-boxes ${upperboxesclasses[i]}">
+        <div class="upper-part-header-boxes">
+            <i><img src="${companies[i].topIcon}" alt=""></i> <p>${companies[i].account}</p>
+          </div>
+
+          <p class="up-boxes-p1">${companies[i].totalFollowers}</p>
+          <p class="up-boxes-p2">${companies[i].typeOfFollowers}</p>
+          
+          <div class="results-flex">
+          <div class="arrows"> <div class ="triangle-up"></div> <div class="triangle-down"></div></div>
+          <p class="up-boxes-p3">${Math.abs(companies[i].netChange)} today</p>
+
+        </div>
+        </div>
+    `;
+
+    //make the content go into the div
+    contentDiv.classList.add('super-flex');
+    contentDiv.innerHTML = content;
+    upBoxes.append(contentDiv);
+
+    //conditionals
+    if(companies[i].netChange > 0){
+        document.querySelectorAll('.triangle-up')[i].style.visibility = "visible"
+        document.querySelectorAll('.up-boxes-p3')[i].style.color ="hsl(163, 72%, 41%)"
+       }
+       else{
+           document.querySelectorAll('.triangle-down')[i].style.visibility = "visible"
+           document.querySelectorAll('.up-boxes-p3')[i].style.color ="hsl(356, 69%, 56%)"
+       }
+  
+   }
+
+//first 4 boxes ends 
+*/
+
+
+//lower boxes
+/*
+for(var i =0; i < secondJson.length; i++){
+
+let lowBoxes = document.querySelector('.box-1')
+let ContentDiv = document.createElement('div')
+
+
+let content =`
+<div class="sec-box-dark sec-box ">
+        <div class="box-1-upper">
+            <p class="box-1-upper-p">${secondJson[i].upperText}</p>
+            <i class="box-1-upper-i"><img src="${secondJson[i].lowIcon}" alt=""></i>
+        </div>
+
+        <div class="box-1-lower">
+            <p class="box-1-lower-p">${secondJson[i].lowerTextValue}</p>
+
+            <div class="results-flex-2">
+                <div class="arrows-2"><div class ="triangle-up2"></div> <div class="triangle-down2"></div></div>
+                <p class="box-1-lower-p2">${Math.abs(secondJson[i].percentage)} %</p>
+            </div>
+
+        </div>
+    </div>
+    `
+
+ContentDiv.classList.add('super-flex')
+ContentDiv.innerHTML = content;
+lowBoxes.append(ContentDiv);
+
+
+if(secondJson[i].percentage > 0 )
+   {
+
+    document.querySelectorAll('.triangle-up2')[i].style.visibility = "visible"
+    document.querySelectorAll('.box-1-lower-p2')[i].style.color ="hsl(163, 72%, 41%)"
+   }
+   else{
+    document.querySelectorAll('.triangle-down2')[i].style.visibility = "visible"
+    document.querySelectorAll('.box-1-lower-p2')[i].style.color ="hsl(356, 69%, 56%)"
+   }
+   
+}
+//lower boxes end
+*/
+//!selection of variables after renderization
+
+
