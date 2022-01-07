@@ -108,6 +108,45 @@ input:checked + .slider:before {
   border-top: 5px solid #c4032a;
 }
 
+.fadeIn-acc {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    background-color: #6f7b80;
+    border-radius: 15px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    background-color: #6f7b80;
+    border-radius: 15px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
