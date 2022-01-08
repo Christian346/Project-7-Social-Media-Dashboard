@@ -108,45 +108,69 @@ input:checked + .slider:before {
   border-top: 5px solid #c4032a;
 }
 
-.fadeIn-acc {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.skeleton {
+  background-color: #6f7b80;
+  height: 50px;
+  width: 90%;
+  border-radius: 15px;
+  -webkit-animation-name: skeleton;
+          animation-name: skeleton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  margin: 0 auto;
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.skeleton-img {
+  background-color: #6f7b80;
+  height: 25px;
+  border-radius: 10px;
+  -webkit-animation-name: skeleton;
+          animation-name: skeleton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    background-color: #6f7b80;
-    border-radius: 15px;
-  }
-  to {
-    opacity: 1;
-  }
+.skeleton-txt {
+  height: 20px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    background-color: #6f7b80;
-    border-radius: 15px;
+@-webkit-keyframes skeleton {
+  0% {
+    background-color: #dee5e8;
   }
-  to {
-    opacity: 1;
+  100% {
+    background-color: #444646;
   }
 }
 
+@keyframes skeleton {
+  0% {
+    background-color: #dee5e8;
+  }
+  100% {
+    background-color: #444646;
+  }
+}
+
+/*
+.fadeIn{
+animation-name: fadeIn;
+animation-duration: 1s;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        background-color: hsl(199, 7%, 47%);
+        border-radius: 15px;
+    }
+    to{
+     opacity: 1;
+    }
+}*/
 * {
   padding: 0;
   margin: 0;

@@ -25,6 +25,7 @@ var lowBoxes = document.querySelector('.box-1');
 // const json = await fetch("data.json");
 async function requestInfo(){
 fetch(`${api_Url}/Companies`)
+
 .then((response) => response.json())
 .then((companies1) => {
     //var global
@@ -47,7 +48,8 @@ toggleButton.addEventListener("click", turnColorToBlack)
 }
 )
 }
-requestInfo();
+setTimeout(requestInfo, 3000)
+//requestInfo();
 
 //
 
@@ -55,16 +57,16 @@ function displayfirst4Boxes (companies , i ){
     var contentDiv = document.createElement('div');
     var tpl= `
      <div class="up-boxes-dark up-boxes ${companies[i].classes}">
-       <div class="upper-part-header-boxes">
-           <i><img src="images/${companies[i].topIcon}" class="fadeIn" alt=""></i> <p class="fadeIn-acc">${companies[i].account}</p>
+       <div class="upper-part-header-boxes ">
+           <i><img src="images/${companies[i].topIcon}" class="" alt=""></i> <p class="">${companies[i].account}</p>
          </div>
 
-         <p class="up-boxes-p1 fadeIn">${companies[i].totalFollowers}</p>
-         <p class="up-boxes-p2 fadeIn">${companies[i].typeOfFollowers}</p>
+         <p class="up-boxes-p1 ">${companies[i].totalFollowers}</p>
+         <p class="up-boxes-p2 ">${companies[i].typeOfFollowers}</p>
          
          <div class="results-flex">
          <div class="arrows"> <div class ="triangle-up"></div> <div class="triangle-down"></div></div>
-         <p class="up-boxes-p3 fadeIn">${Math.abs(companies[i].netChange)} today</p>
+         <p class="up-boxes-p3 ">${Math.abs(companies[i].netChange)} today</p>
        </div>
        </div>
    `

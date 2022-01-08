@@ -10,6 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="javascript.js" defer type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"> </script>
+            
+    <style>
+         #preload{
+                margin: 0 auto;
+            }
+        body{
+            opacity: 0;
+            transition: 2s;
+        }
+    </style>
+    <script>
+        $(window).on("load", function(){
+            $("body").css("opacity", 1)
+            $(".preload").css("display", "none")
+
+        });
+
+    </script>
+    
+  
 </head>
 <body class="body-dark body-white">
     <!--header-->
@@ -38,25 +59,27 @@
     
 <!--upper section boxes-->
 
+<img src="images/Eclipse-1s-200px.svg" class="preload" alt="">
 
-   <!-- 
-
+   
+<!--
     <div class="super-flex">
         <div class=" up-boxes-dark up-boxes twit-box">
-          <div class="upper-part-header-boxes">
-              <i><img src="images/icon-twitter.svg" class="fadeIn" alt=""></i> 
-              <p class="skeleton-acc">@nathanf</p>
+          <div class="upper-part-header-boxes ">
+              <i><img src="" class="skeleton-img" alt=""></i> 
+              <p class="skeleton skeleton-txt"></p>
           </div>
-          <p class="up-boxes-p1 skeleton">1044</p>
-          <p class="up-boxes-p2 skeleton">FOLLOWERS</p>
+          <p class="up-boxes-p1 skeleton-"></p>
+          <p class="up-boxes-p2 skeleton-"></p>
   
           <div class="results-flex">
           <div class="arrows"><div class ="triangle-up"></div> <div class="triangle-down"></div></div>
-          <p class="up-boxes-p3 skeleton"> 99 today</p>
+          <p class="up-boxes-p3">98 today</p>
           </div> 
         </div>
       </div>
     -->
+    
     
 </div>
 <!--overview section title-->
@@ -68,6 +91,10 @@
 
     <!--boxes below-->
     <div class="box-1-dark box-1">
+
+<img src="images/Eclipse-1s-200px.svg" class="preload" alt="">
+
+   
   <!--
    <div class="super-flex">
     <div class="sec-box-dark sec-box ">
@@ -93,4 +120,5 @@
 </div>
 
 </body>
+
 </html>
