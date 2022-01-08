@@ -48,8 +48,8 @@ toggleButton.addEventListener("click", turnColorToBlack)
 }
 )
 }
-setTimeout(requestInfo, 3000)
-//requestInfo();
+//setTimeout(requestInfo, 3000)
+requestInfo();
 
 //
 

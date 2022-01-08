@@ -40,18 +40,17 @@ border-bottom-right-radius: 30px;
     display: flex;
     margin:0 auto;
     width:73%;
-    background-color:none;
+  
 }
 
 .title{
-    background-color:none;
     margin-top: 3em;
     width:80%;
 }
 
 
 .button-area{
-    background-color:none;
+  
     display: flex;
     width:100%;
     margin-top:3em;
@@ -64,7 +63,7 @@ border-bottom-right-radius: 30px;
 }
 
 .second-sec{
-background-color:none;
+
 grid-area:second-sec;
 width:82%;
 margin:0 auto;
@@ -109,7 +108,7 @@ text-align: center;
 
 
 .upper-part-header-boxes{
-    background-color: none;
+   
     display: flex;
     justify-content: center;
     margin-top: 1.5em;
@@ -162,18 +161,16 @@ color:$Lime-Green
 }
 // places for tirange 2
 .results-flex-2{
- background-color: none;
+
  width: 100%;
  display: flex;
  justify-content: flex-end;
  margin:1em 1em 0em 0em;
 }
 .arrows-2{
-
 display: flex;
 width: 100%;
 margin-top: -0.1em;
-background-color:none;
 justify-content: flex-end;
 align-items: center;
 
@@ -189,11 +186,11 @@ margin: 0 auto;
 margin-top:0em;
 margin-right:0em;
 margin-bottom:2em;
-background-color:none; 
+
 
 }
 .sec-over-p{
-    background-color:none;
+  
     width:81%;
     margin: 0 auto;
     margin-right:3.3em;
@@ -202,7 +199,6 @@ background-color:none;
 
 .box-1{
 grid-area:box-1;
-background-color:none;
 display:flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -224,7 +220,7 @@ white-space: nowrap;
 }
 .box-1-lower{
 display: flex;
-background-color: none;
+
 }
 .box-1-upper-p{
 color:$Dark-Grayish-Blue-Text;

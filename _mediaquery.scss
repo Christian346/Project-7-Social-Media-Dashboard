@@ -1,7 +1,6 @@
 @mixin phonequery(){
     
     .header{
-        background-color:none;
         padding-bottom:13.5em;
         width: 99%;
     }
@@ -11,7 +10,6 @@
         border-bottom: 2px solid $toggleLight;
         padding-bottom: 2em;
         width: 100%;
-        background-color:none;
     }
     .title-button{
         flex-direction: column;
@@ -19,7 +17,6 @@
     }
     .button-area{
         margin-top: 1em;
-        background-color:none;
         width:100%;
         justify-content: flex-end;
     }
@@ -30,7 +27,6 @@
     }
     .second-sec{
         margin-top:2em;
-        background-color:none;
         width: 100%;
     }
     .up-boxes{
@@ -75,7 +71,6 @@
         .results-flex-2{
             display: flex;
             margin:2.3em 1em 1em 0em;
-            background-color:none;
             width: 100%;
             justify-content: flex-end;
             }
@@ -84,7 +79,7 @@
                 display: flex;
                 width: 40%;
                 margin-right:0em;//make this negative to shift arrow
-                background-color:none;
+               
                 justify-content: flex-end;
                 align-items: center;
                 
@@ -106,7 +101,7 @@
             }
             
             .box-1-lower-p2{
-                background-color:none;
+               
                 white-space: nowrap;
                 width: auto;
                 display: flex;
